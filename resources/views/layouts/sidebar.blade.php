@@ -19,9 +19,15 @@
   </li>
   
   <li class="nav-item">
-    <a class="nav-link" href="{{ route('products') }}">
+    <a class="nav-link" href="{{ route('quartos') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Product</span></a>
+      <span>Quartos</span></a>
+  </li>
+
+    <li class="nav-item">
+    <a class="nav-link" href="{{ route('hospede') }}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Hospede</span></a>
   </li>
   
   <li class="nav-item">

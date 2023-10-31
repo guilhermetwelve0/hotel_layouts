@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('quartos', function (Blueprint $table) {
+        Schema::create('hospede', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->string('preco');
-            $table->string('andar');
-            $table->text('numero');
+            $table->string('cpf');
+            $table->string('rg');
+            $table->string('despesa');
+            $table->string('nacionalidade');
+            $table->text('comentarios');
+            $table->string('diaria');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('quartos');
+        Schema::dropIfExists('hospede');
     }
 };
