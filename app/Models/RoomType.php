@@ -5,15 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class RoomType extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'id',
+        'name',
+        'slug',
         'price',
-        'product_code',
         'description',
-        'photo'
+        'thumbnail',
     ];
 }

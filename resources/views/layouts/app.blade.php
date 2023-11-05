@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>SB Admin 2 - Dashboard</title>
+  <title>ESC Hotel</title>
   <!-- Custom fonts for this template-->
   <link href="{{ asset('admin_assets/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  
+  <!-- Adicione os links para os arquivos CSS do Bootstrap -->
+<link rel="stylesheet" href="caminho-para-o-css/bootstrap.min.css">
+<!-- Adicione os scripts JavaScript do Bootstrap (jQuery é necessário) -->
+<script src="caminho-para-o-js/jquery.min.js"></script>
+<script src="caminho-para-o-js/bootstrap.min.js"></script>
+
   <!-- Custom styles for this template-->
   <link href="{{ asset('admin_assets/css/sb-admin-2.min.css') }}" rel="stylesheet">
 </head>

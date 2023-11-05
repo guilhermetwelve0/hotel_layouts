@@ -1,6 +1,6 @@
 @extends('layouts.app')
   
-@section('title', 'Perfil')
+@section('title', 'Configurações')
   
 @section('contents')
     <hr />
@@ -10,7 +10,6 @@
         <div class="col-md-12 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Configurações de Perfil</h4>
                 </div>
                 <div class="row" id="res"></div>
                 <div class="row mt-2">
@@ -35,7 +34,7 @@
                     </div>
                 </div>
                  
-                <div class="mt-5 text-center"><button id="btn" class="btn btn-dark profile-button" type="submit">Salvar Perfil</button></div>
+                <div class="mt-5 text-center"><button id="btn" class="btn btn-dark profile-button" type="submit">Salvar Alterações</button></div>
             </div>
         </div>
          
