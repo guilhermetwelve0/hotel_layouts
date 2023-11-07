@@ -27,11 +27,11 @@
                 <div class="row mt-2">
                     <div class="col-md-6">
                         <label class="labels">Telefone</label>
-                        <input type="text" name="phone" class="form-control" placeholder="Phone Number" value="{{ auth()->user()->phone }}">
+                        <input type="text" name="phone" class="form-control" placeholder="Telefone" value="{{ auth()->user()->phone }}">
                     </div>
                     <div class="col-md-6">
                         <label class="labels">Endereço</label>
-                        <input type="text" name="address" class="form-control" value="{{ auth()->user()->address }}" placeholder="Address">
+                        <input type="text" name="address" class="form-control" value="{{ auth()->user()->address }}" placeholder="Endereço">
                     </div>
                 </div>
                  

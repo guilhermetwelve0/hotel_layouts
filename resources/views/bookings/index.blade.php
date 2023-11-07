@@ -17,7 +17,6 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Hotel</th>
                 <th>Hóspede</th>
                 <th>Quarto</th>
                 <th>Check In</th>
@@ -31,8 +30,6 @@
                 @foreach($bookings as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $rs->id }}</td>
-                        <td class="align-middle">{{ $rs->hotel_id }}</td>
                         <td class="align-middle">{{ $rs->guests_id }}</td>
                         <td class="align-middle">{{ $rs->room_id }}</td>
                         <td class="align-middle">{{ $rs->check_in_date }}</td>  

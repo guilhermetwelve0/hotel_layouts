@@ -12,24 +12,25 @@
   <hr class="sidebar-divider my-0">
   
   <!-- Nav Item - Dashboard -->
+<!--  
   <li class="nav-item">
     <a class="nav-link" href="{{ route('hotel') }}">
       <i class="fa fa-home"></i>
       <span>Hotel</span></a>
   </li>
-
+-->
   <li class="nav-item">
     <a class="nav-link" href="{{ route('bookings') }}">
       <i class="fa fa-list"></i>
       <span>Lista de Reservas</span></a>
   </li>
-
+<!--
   <li class="nav-item">
     <a class="nav-link" href="{{ route('dashboard') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
-
+-->
   <li class="nav-item">
     <a class="nav-link" href="{{ route('guests') }}">
       <i class="fa fa-users"></i>
@@ -53,7 +54,7 @@
       <i class="fa fa-bell"></i>
       <span>Serviços</span></a>
   </li>
-  
+<!--  
   <li class="nav-item">
   <a class="nav-link" href="{{ route('profile') }}">
       <i class="fa fa-user"></i>
@@ -65,7 +66,7 @@
       <i class="fa fa-cog"></i>
       <span>Configurações</span></a>
   </li>  
-
+-->
   <!-- Divider -->
   <hr class="sidebar-divider d-none d-md-block">
   

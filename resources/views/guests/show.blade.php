@@ -11,57 +11,57 @@
             <input type="text" name="name" class="form-control" placeholder="Nome do Hóspede" value="{{ $guests->name }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">CPF do Hospede</label>
+            <label class="form-label">Sobrenome</label>
             <input type="text" name="last_name" class="form-control" placeholder="Sobrenome do Hóspede" value="{{ $guests->last_name }}" readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">RG do Hospede</label>
+            <label class="form-label">CPF</label>
             <input type="text" name="cpf" class="form-control" placeholder="CPF" value="{{ $guests->cpf }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Despesa do Hospede</label>
+            <label class="form-label">Data de Nascimento</label>
             <input type="text" name="birthday" class="form-control" placeholder="Data de Nascimento" value="{{ $guests->birthday }}" readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">Nacionalidade do Hospede</label>
+            <label class="form-label">Sexo</label>
             <input type="text" name="sex" class="form-control" placeholder="Sexo" value="{{ $guests->sex }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Comentarios do Hospede</label>
+            <label class="form-label">CEP</label>
             <input type="text" name="cep" class="form-control" placeholder="CEP" value="{{ $guests->cep }}" readonly>
         </div>
     </div>
     <div class="row">
     <div class="col mb-3">
-            <label class="form-label">Comentarios do Hospede</label>
+            <label class="form-label">Rua</label>
             <input type="text" name="street" class="form-control" placeholder="Rua" value="{{ $guests->street }}" readonly>
         </div>
     </div>
     <div class="row">
     <div class="col mb-3">
-            <label class="form-label">Comentarios do Hospede</label>
+            <label class="form-label">Cidade</label>
             <input type="text" name="city" class="form-control" placeholder="Cidade" value="{{ $guests->city }}" readonly>
         </div>
     </div>
     <div class="row">
     <div class="col mb-3">
-            <label class="form-label">Comentarios do Hospede</label>
+            <label class="form-label">Estado</label>
             <input type="text" name="state" class="form-control" placeholder="Estado" value="{{ $guests->state }}" readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-6">
-            <label class="form-label">Diaria do Hospede</label>
+            <label class="form-label">Email</label>
             <input type="text" name="email" class="form-control" placeholder="Email" value="{{ $guests->email }}" readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-6">
-            <label class="form-label">Diaria do Hospede</label>
+            <label class="form-label">Telefone</label>
             <input type="text" name="phone" class="form-control" placeholder="Telefone" value="{{ $guests->phone }}" readonly>
         </div>
     </div>

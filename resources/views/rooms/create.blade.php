@@ -34,7 +34,7 @@
 
     <div class="row mb-3">
             <div class="col">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-dark">Enviar</button>
             </div>
         </div>
     </form>

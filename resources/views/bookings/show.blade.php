@@ -7,10 +7,6 @@
     <hr />
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">ID</label>
-            <input type="text" name="id" class="form-control" placeholder="ID do Hospede" value="{{ bookings->id }}" readonly>
-        </div>
-        <div class="col mb-3">
             <label class="form-label">Hotel</label>
             <input type="text" name="hotel_id" class="form-control" placeholder="Hotel" value="{{ bookings->hotel_id }}" readonly>
         </div>

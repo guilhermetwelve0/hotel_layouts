@@ -5,7 +5,7 @@
 @section('contents')
 <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Lista dos Serviços</h1>
-        <a href="{{ route('services.create') }}" class="btn btn-dark">Adicionar Tipo de Quarto</a>
+        <a href="{{ route('services.create') }}" class="btn btn-dark">Adicionar Serviço</a>
     </div>
     <hr />
     @if(Session::has('success'))

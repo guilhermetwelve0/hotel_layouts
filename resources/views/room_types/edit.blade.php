@@ -10,41 +10,26 @@
         @method('PUT')
         <div class="row">
             <div class="col mb-3">
-                <label class="form-label">ID</label>
-                <input type="text" name="id" class="form-control" placeholder="ID do Hóspede" value="{{ $room_types->id }}" >
+                <label class="form-label">Nome do Quarto</label>
+                <input type="text" name="name" class="form-control" placeholder="Nome do Quarto" value="{{ $room_types->name }}" >
             </div>
             <div class="col mb-3">
-                <label class="form-label">Hotel</label>
-                <input type="text" name="hotel_id" class="form-control" placeholder="Hotel" value="{{ $room_types->hotel_id }}" >
+                <label class="form-label">URL</label>
+                <input type="text" name="slug" class="form-control" placeholder="URL" value="{{ $room_types->slug }}" >
             </div>
             <div class="col mb-3">
-                <label class="form-label">Hóspede</label>
-                <input type="text" name="guests_id" class="form-control" placeholder="Nome do Hóspede" value="{{ $room_types->guests_id }}" >
+                <label class="form-label">Preço do Quarto</label>
+                <input type="text" name="price" class="form-control" placeholder="Preço do Quarto" value="{{ $room_types->price }}" >
             </div>
         </div>
         <div class="row">
             <div class="col mb-3">
-                <label class="form-label">Quarto</label>
-                <input type="text" name="room_id" class="form-control" placeholder="Quarto da Reserva" value="{{ $room_types->room_id }}" >
+                <label class="form-label">Descrição</label>
+                <input type="text" name="description" class="form-control" placeholder="Descrição" value="{{ $room_types->description }}" >
             </div>
             <div class="col mb-3">
-                <label class="form-label">Check-in</label>
-                <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in" value="{{ $room_types->check_in_date }}" >
-            </div>
-        </div>
-        <div class="row">
-            <div class="col mb-3">
-                <label class="form-label">Check-out</label>
-                <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-out" value="{{ $room_types->check_out_date }}" >
-            </div>
-            <div class="col mb-3">
-                <label class="form-label">Total</label>
-                <input type="number" name="total" class="form-control" placeholder="Total da Reserva" value="{{ $room_types->total }}" >
-            </div>
-        </div>
-        <div class="col mb-3">
-                <label class="form-label">Funcionário</label>
-                <input type="text" name="registered_by" class="form-control" placeholder="Funcionário" value="{{ $room_types->registered_by }}" >
+                <label class="form-label">Imagem</label>
+                <input type="date" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" >
             </div>
         </div>
         <div class="row">

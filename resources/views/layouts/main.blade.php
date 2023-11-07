@@ -29,7 +29,6 @@
     <body class="font-sans antialiased">
 
     <div class="min-h-screen bg-green-900">
-            @include('layouts.nav')
             <main>
                 @yield('content')
             </main>

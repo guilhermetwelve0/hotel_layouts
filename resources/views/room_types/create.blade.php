@@ -29,7 +29,7 @@
 
         <div class="row">
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-dark">Enviar</button>
             </div>
         </div>
     </form>
