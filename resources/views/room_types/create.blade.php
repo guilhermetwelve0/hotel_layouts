@@ -12,18 +12,15 @@
                 <input type="text" name="name" class="form-control" placeholder="Nome do Quarto">
             </div>
             <div class="col">
-                <input type="text" name="slug" class="form-control" placeholder="URL">
-            </div>
-            <div class="col">
                 <input type="number" name="price" class="form-control" placeholder="Preço do Quarto">
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="description" class="form-control" placeholder="Descrição do Quarto">
+                <textarea name="description" class="form-control" placeholder="Descrição do Quarto"></textarea>
             </div>
             <div class="col">
-                <input type="text" name="thumbnail" class="form-control" placeholder="Imagem do Quarto">
+                <input type="file" name="thumbnail" class="form-control" style="height: 50px;" accept="image/*" placeholder="Imagem do Quarto">
             </div>
         </div>
 

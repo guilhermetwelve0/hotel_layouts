@@ -15,17 +15,22 @@
                 <input type="text" name="room_no" class="form-control" placeholder="Número do Quarto">
             </div>
             <div class="col">
-                <input type="text" name="room_type_id" class="form-control" placeholder="Tipo do Quarto">
+                <select name="room_type_id" class="form-control">
+                    <option value="">Selecionar Tipo de Quarto</option>
+                @foreach($room_types as $rs)
+                    <option value="{{ $rs->id }}">{{ $rs->name }}</option>
+                @endforeach
+                </select>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="description" class="form-control" placeholder="Descrição da Reserva">
+                <input type="text" name="description" class="form-control" placeholder="Descrição do Quarto">
             </div>
         <div class="row mb-3">
             <div class="col">
-        <select name="status_reservation" class="form-control">
-            <option value=" ">Status da Reserva</option>
+        <select name="status" class="form-control">
+            <option value=" ">Status do Quarto</option>
             <option value="Livre">Livre</option>
             <option value="Ocupado">Ocupado</option>
             <option value="Reservado">Reservado</option>

@@ -11,10 +11,6 @@
             <input type="text" name="name" class="form-control" placeholder="Nome do Quarto" value="{{ $room_types->name }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">URL</label>
-            <input type="text" name="slug" class="form-control" placeholder="URL" value="{{ $room_types->slug }}" readonly>
-        </div>
-        <div class="col mb-3">
             <label class="form-label">Preço do Quarto</label>
             <input type="text" name="price" class="form-control" placeholder="Preço do Quarto" value="{{ $room_types->price }}" readonly>
         </div>
@@ -26,7 +22,7 @@
         </div>
         <div class="col mb-3">
             <label class="form-label">Imagem</label>
-            <input type="date" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" readonly>
+            <input type="text" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" readonly>
         </div>
     </div>
     <div class="row">

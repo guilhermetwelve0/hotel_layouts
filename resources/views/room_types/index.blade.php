@@ -18,7 +18,6 @@
             <tr>
                 <th>ID</th>
                 <th>Nome do Quarto</th>
-                <th>URL</th>
                 <th>Preço do Quarto</th>
                 <th>Descrição</th>
                 <th>Imagem</th>
@@ -29,8 +28,7 @@
                 @foreach($room_types as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $rs->name }}</td>  
-                        <td class="align-middle">{{ $rs->slug }}</td>  
+                        <td class="align-middle">{{ $rs->name }}</td>
                         <td class="align-middle">{{ $rs->price }}</td>  
                         <td class="align-middle">{{ $rs->description }}</td>  
                         <td class="align-middle">{{ $rs->thumbnail }}</td>  
@@ -52,9 +50,6 @@
                     </tr>
                 @endforeach
             @else
-                <tr>
-                    <td class="text-center" colspan="5">Tipo de quarto não encontrado</td>
-                </tr>
             @endif
         </tbody>
     </table>

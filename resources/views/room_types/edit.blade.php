@@ -14,10 +14,6 @@
                 <input type="text" name="name" class="form-control" placeholder="Nome do Quarto" value="{{ $room_types->name }}" >
             </div>
             <div class="col mb-3">
-                <label class="form-label">URL</label>
-                <input type="text" name="slug" class="form-control" placeholder="URL" value="{{ $room_types->slug }}" >
-            </div>
-            <div class="col mb-3">
                 <label class="form-label">Preço do Quarto</label>
                 <input type="text" name="price" class="form-control" placeholder="Preço do Quarto" value="{{ $room_types->price }}" >
             </div>
@@ -29,13 +25,7 @@
             </div>
             <div class="col mb-3">
                 <label class="form-label">Imagem</label>
-                <input type="date" name="thumbnail" class="form-control" placeholder="Imagem" value="{{ $room_types->thumbnail }}" >
-            </div>
-        </div>
-        <div class="row">
-            <div class="col mb-3">
-                <label class="form-label">Status</label>
-                <input type="text" name="status" class="form-control" placeholder="Status da Reserva" value="{{ $room_types->status }}" >
+                <input type="file" name="thumbnail" class="form-control" style="height: 50px;" accept="image/*" placeholder="Imagem do Quarto">
             </div>
         </div>
         <div class="row">

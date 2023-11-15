@@ -18,7 +18,6 @@
             <tr>
                 <th>ID</th>
                 <th>Nome do Serviço</th>
-                <th>URL</th>
                 <th>Valor do Serviço</th>
                 <th>Ícone</th>
             </tr>
@@ -29,7 +28,6 @@
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->name }}</td>  
-                        <td class="align-middle">{{ $rs->slug }}</td>  
                         <td class="align-middle">{{ $rs->price }}</td>  
                         <td class="align-middle">{{ $rs->icon }}</td>  
                         <td class="align-middle">
@@ -50,9 +48,6 @@
                     </tr>
                 @endforeach
             @else
-                <tr>
-                    <td class="text-center" colspan="5">Serviço nao encontrado</td>
-                </tr>
             @endif
         </tbody>
     </table>

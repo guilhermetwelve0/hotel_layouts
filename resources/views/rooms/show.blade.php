@@ -7,57 +7,36 @@
     <hr />
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">ID</label>
-            <input type="text" name="id" class="form-control" placeholder="ID do Hospede" value="{{ rooms->id }}" readonly>
+            <label class="form-label">Andar do Quarto</label>
+            <input type="text" name="floor" class="form-control" placeholder="Andar" value="{{ $rooms->floor }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Hotel</label>
-            <input type="text" name="hotel_id" class="form-control" placeholder="Hotel" value="{{ rooms->hotel_id }}" readonly>
+            <label class="form-label">Número do Quarto</label>
+            <input type="text" name="room_no" class="form-control" placeholder="Número do Quarto" value="{{ $rooms->room_no }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Hóspede</label>
-            <input type="text" name="guests_id" class="form-control" placeholder="Nome do Hóspede" value="{{ rooms->guests_id }}" readonly>
+            <label class="form-label">Tipo do Quarto</label>
+            <input type="text" name="roomType" class="form-control" placeholder="Tipo do Quarto" value="{{ $rooms->roomType->name }}" readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-3">
-            <label class="form-label">RG do Hospede</label>
-            <input type="text" name="room_id" class="form-control" placeholder="Quarto da Reserva" value="{{ rooms->room_id }}" readonly>
+            <label class="form-label">Descrição do Quarto</label>
+            <input type="text" name="description" class="form-control" placeholder="Descrição" value="{{ $rooms->description }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">Check-in</label>
-            <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in" value="{{ rooms->check_in_date }}" readonly>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col mb-3">
-            <label class="form-label">Check-out</label>
-            <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-out" value="{{ rooms->check_out_date }}" readonly>
-        </div>
-        <div class="col mb-3">
-            <label class="form-label">Total</label>
-            <input type="number" name="total" class="form-control" placeholder="Total da Reserva" value="{{ rooms->total }}" readonly>
-        </div>
-    </div>
-    <div class="col mb-3">
-            <label class="form-label">Funcionário</label>
-            <input type="text" name="registered_by" class="form-control" placeholder="Funcionário" value="{{ rooms->registered_by }}" readonly>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col mb-6">
-            <label class="form-label">Status</label>
-            <input type="text" name="status" class="form-control" placeholder="Status da Reserva" value="{{ rooms->status }}" readonly>
+            <label class="form-label">Status da Reserva</label>
+            <input type="text" name="status" class="form-control" placeholder="Status da Reserva" value="{{ $rooms->status }}" readonly>
         </div>
     </div>
     <div class="row">
         <div class="col mb-3">
             <label class="form-label">Criado em</label>
-            <input type="text" name="created_at" class="form-control" placeholder="Criado em" value="{{ rooms->created_at }}" readonly>
+            <input type="text" name="created_at" class="form-control" placeholder="Criado em" value="{{ $rooms->created_at }}" readonly>
         </div>
         <div class="col mb-3">
             <label class="form-label">Atualizado em</label>
-            <input type="text" name="updated_at" class="form-control" placeholder="Utualizado em" value="{{ rooms->updated_at }}" readonly>
+            <input type="text" name="updated_at" class="form-control" placeholder="Utualizado em" value="{{ $rooms->updated_at }}" readonly>
         </div>
     </div>
 @endsection

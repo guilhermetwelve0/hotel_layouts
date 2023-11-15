@@ -11,10 +11,6 @@
             <input type="text" name="name" class="form-control" placeholder="Nome do Serviço" value="{{ $services->name }}" readonly>
         </div>
         <div class="col mb-3">
-            <label class="form-label">URL</label>
-            <input type="text" name="slug" class="form-control" placeholder="URL" value="{{ $services->slug }}" readonly>
-        </div>
-        <div class="col mb-3">
             <label class="form-label">Valor do Serviço</label>
             <input type="text" name="price" class="form-control" placeholder="Valor do Serviço" value="{{ $services->price }}" readonly>
         </div>

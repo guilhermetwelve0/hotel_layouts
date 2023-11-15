@@ -13,20 +13,21 @@
                 <label class="form-label">Nome do Serviço</label>
                 <input type="text" name="name" class="form-control" placeholder="Nome do Serviço" value="{{ $services->name }}" >
             </div>
-            <div class="col mb-3">
-                <label class="form-label">URL</label>
-                <input type="text" name="slug" class="form-control" placeholder="URL" value="{{ $services->slug }}" >
-            </div>
         </div>
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Valor do Serviço</label>
                 <input type="number" name="price" class="form-control" placeholder="Valor do Serviço" value="{{ $services->price }}" >
             </div>
-            <div class="col mb-3">
-                <label class="form-label">Ícone do Serviço</label>
-                <input type="text" name="icon" class="form-control" placeholder="Ícone do Serviço" value="{{ $services->icon }}" >
-            </div>
+        <div class="col">
+        <label class="form-label">Ícone do Serviço</label>
+            <select name="icon" class="form-control">
+                <option value=" ">Ícone</option>
+                <option value="&#x1F6B2">&#x1F6B2;</option>
+                <option value="&#x1F6A7">&#x1F6A7;</option>
+                <option value="&#x1F511">&#x1F511;</option>
+        </select>
+    </div>
         </div>
         <div class="row">
             <div class="d-grid">

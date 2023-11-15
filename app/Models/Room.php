@@ -13,8 +13,13 @@ class Room extends Model
         'id',
         'floor',
         'room_no',
-        'room_type_name',
+        'room_type_id',
         'description',
-        'status_reservation',
+        'status',
     ];
+
+    public function roomType()
+    {
+        return $this->belongsTo(RoomType::class, 'room_type_id');
+    }
 }

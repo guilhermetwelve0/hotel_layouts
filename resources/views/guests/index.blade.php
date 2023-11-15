@@ -64,9 +64,6 @@
                     </tr>
                 @endforeach
             @else
-                <tr>
-                    <td class="text-center" colspan="5">Hóspede não encontrado</td>
-                </tr>
             @endif
         </tbody>
     </table>

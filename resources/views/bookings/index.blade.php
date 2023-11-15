@@ -50,9 +50,6 @@
                     </tr>
                 @endforeach
             @else
-                <tr>
-                    <td class="text-center" colspan="5">Reserva não encontrada</td>
-                </tr>
             @endif
         </tbody>
     </table>

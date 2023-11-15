@@ -12,21 +12,19 @@
                 <input type="text" name="name" class="form-control" placeholder="Nome do Serviço">
             </div>
             <div class="col">
-                <input type="text" name="slug" class="form-control" placeholder="URL">
-            </div>
-            <div class="col">
                 <input type="number" name="price" class="form-control" placeholder="Valor do Serviço">
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col">
+    <div class="col">
         <select name="icon" class="form-control">
             <option value=" ">Ícone</option>
-            <option value="Livre">Livre</option>
-            <option value="Ocupado">Ocupado</option>
-            <option value="Reservado">Reservado</option>
+            <option value="&#x1F6B2">&#x1F6B2;</option>
+            <option value="&#x1F6A7">&#x1F6A7;</option>
+            <option value="&#x1F511">&#x1F511;</option>
         </select>
     </div>
+</div>
 
     <div class="row mb-3">
             <div class="col">

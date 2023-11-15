@@ -31,9 +31,9 @@
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->floor }}</td>
                         <td class="align-middle">{{ $rs->room_no }}</td>
-                        <td class="align-middle">{{ $rs->room_type_id }}</td>
+                        <td class="align-middle">{{ $rs->roomType->name }}</td>
                         <td class="align-middle">{{ $rs->description }}</td>  
-                        <td class="align-middle">{{ $rs->status_reservation }}</td>  
+                        <td class="align-middle">{{ $rs->status }}</td>  
                         <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <a href="{{ route('rooms.show', $rs->id) }}" class="btn btn-secondary">
@@ -52,9 +52,6 @@
                     </tr>
                 @endforeach
             @else
-                <tr>
-                    <td class="text-center" colspan="5">Quarto não encontrado</td>
-                </tr>
             @endif
         </tbody>
     </table>
