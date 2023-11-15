@@ -4,6 +4,6 @@
   
 @section('contents')
   <div class="row">
-    Dashboard
+    Dashboard - Gráficos e Relatórios
   </div>
 @endsection

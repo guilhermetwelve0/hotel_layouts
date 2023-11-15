@@ -1,0 +1,48 @@
+body.landing-page {
+    background-color: #083D77; /* Cor verde escuro */
+    color: #fff; /* Cor do texto */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0B5091; /* Cor de fundo do cabeçalho */
+}
+
+.logo img {
+    width: 40px; /* Ajuste o tamanho do logo conforme necessário */
+    height: 40px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FECB00; /* Cor de destaque ao passar o mouse */
+}
+
+footer {
+    padding: 10px 0;
+    background-color: #083D77; /* Cor de fundo do rodapé */
+}
+
+footer .copyright {
+    font-size: 14px;
+}
