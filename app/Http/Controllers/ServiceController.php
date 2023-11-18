@@ -30,7 +30,21 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        Service::create($request->all());
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required|numeric',
+            'icon' => 'required',
+        ]);
+    
+        // Formatação do preço para reais (R$)
+        $formattedPrice = number_format($request->input('price'), 2, ',', '.');
+    
+        // Criação do serviço com preço formatado
+        Service::create([
+            'name' => $request->input('name'),
+            'price' => $request->input('price'),
+            'icon' => $request->input('icon'),
+        ]);
 
         return redirect()->route('services')->with('success', 'Serviço adicionando com sucesso');
     }

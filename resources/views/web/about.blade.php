@@ -256,39 +256,23 @@ header ul li a:hover {
     <div class="head_container">
         <div class="box">
             <div class="text">
-                <h1>Conheça nossa história</h1>
-                <h3>Descubra a magia por trás de nossa hospitalidade.</h3>
+            <h2 style="font-size: 2.5rem;" class="font-semibold mb-4 text-secondary">Nossa História</h2>
+                <h3>Há mais de uma década, nossa jornada começou com um compromisso apaixonado com a hospitalidade.
+                        Desde então, temos o orgulho de criar experiências únicas e inesquecíveis para nossos hóspedes.</h3>
+                </br>
+              <h2 style="font-size: 2.5rem;" class="font-semibold mb-4 text-secondary">Nossa Missão</h2>
+                <h3>Nossa missão é simples: superar as expectativas de nossos hóspedes. Queremos que cada estadia
+                    seja repleta de momentos memoráveis e sorrisos. Estamos dedicados a fazer com que nossos
+                    hóspedes se sintam em casa.</h3>
             </div>
+        </div>
         </div>
         <div class="image">
             <img src="{{asset('img/home1.jpg')}}" class="slide">
         </div>
-    </div>
-
-    <section class="home" id="home">
-      <div class="head_container">
-        <div class="box">
-          <div class="text">
-                    <h2>Nossa História</h2>
-                    <h3>Há mais de uma década, nossa jornada começou com um compromisso apaixonado com a hospitalidade.
-                        Desde então, temos o orgulho de criar experiências únicas e inesquecíveis para nossos hóspedes.</h3>
-                </div>
-                </div>
-        </div>
-    <section class="home" id="home">
-      <div class="head_container">
-        <div class="box">
-                <div class="text">
-                    <h2>Nossa Missão</h2>
-                    <h3>Nossa missão é simples: superar as expectativas de nossos hóspedes. Queremos que cada estadia
-                        seja repleta de momentos memoráveis e sorrisos. Estamos dedicados a fazer com que nossos
-                        hóspedes se sintam em casa.</h3>
-            </div>
-        </div>
-    </section>
 </section>
 
-  <script>
+<script>
     function img(anything) {
       document.querySelector('.slide').src = anything;
     }

@@ -54,13 +54,13 @@
         </div>
     </div>
     <div class="row">
-        <div class="col mb-6">
+        <div class="col mb-3">
             <label class="form-label">Email</label>
             <input type="text" name="email" class="form-control" placeholder="Email" value="{{ $guests->email }}" readonly>
         </div>
     </div>
     <div class="row">
-        <div class="col mb-6">
+        <div class="col mb-3">
             <label class="form-label">Telefone</label>
             <input type="text" name="phone" class="form-control" placeholder="Telefone" value="{{ $guests->phone }}" readonly>
         </div>

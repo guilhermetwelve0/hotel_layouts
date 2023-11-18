@@ -18,9 +18,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome do Quarto</th>
-                <th>Preço do Quarto</th>
                 <th>Descrição</th>
-                <th>Imagem</th>
             </tr>
         </thead>
         <tbody>
@@ -29,9 +27,7 @@
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->name }}</td>
-                        <td class="align-middle">{{ $rs->price }}</td>  
                         <td class="align-middle">{{ $rs->description }}</td>  
-                        <td class="align-middle">{{ $rs->thumbnail }}</td>  
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
                             <a href="{{ route('room_types.show', $rs->id) }}" class="btn btn-secondary">

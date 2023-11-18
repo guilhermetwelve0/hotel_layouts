@@ -256,8 +256,8 @@ header ul li a:hover {
     <div class="head_container">
       <div class="box">
         <div class="text">
-          <h1>Olá Sejam Bem Vindos</h1>
-          <h3>Bem-vindo ao nosso sistema de hotelaria! Sua estadia conosco será inesquecível.</h3>
+          <h1>Olá, Sejam Bem Vindos</h1>
+          <h3>Bem-vindo ao nosso sistema de hotelaria!</h3>
         </div>
       </div>
       <div class="image">

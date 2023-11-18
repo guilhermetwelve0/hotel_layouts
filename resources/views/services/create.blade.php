@@ -11,23 +11,26 @@
             <div class="col">
                 <input type="text" name="name" class="form-control" placeholder="Nome do Serviço">
             </div>
-            <div class="col">
-                <input type="number" name="price" class="form-control" placeholder="Valor do Serviço">
+        <div class="col">
+            <div class="input-group">
+                <span class="input-group-text">R$</span>
+                <input type="number" name="price" class="form-control" id="price" placeholder="Valor do Serviço" step="0.01">
             </div>
         </div>
-        <div class="row mb-3">
     <div class="col">
         <select name="icon" class="form-control">
             <option value=" ">Ícone</option>
-            <option value="&#x1F6B2">&#x1F6B2;</option>
-            <option value="&#x1F6A7">&#x1F6A7;</option>
-            <option value="&#x1F511">&#x1F511;</option>
+            <option value="&#127946">&#127946;</option>
+            <option value="&#127973">&#127973;</option>
+            <option value="&#128218">&#128218;</option>
+            <option value="&#127934">&#127934;</option>
+            <option value="&#128250">&#128250;</option>
         </select>
     </div>
 </div>
 
     <div class="row mb-3">
-            <div class="col">
+        <div class="col d-flex justify-content-center">
                 <button type="submit" class="btn btn-dark">Enviar</button>
             </div>
         </div>

@@ -15,6 +15,10 @@
             <input type="text" name="room_no" class="form-control" placeholder="Número do Quarto" value="{{ $rooms->room_no }}" readonly>
         </div>
         <div class="col mb-3">
+            <label class="form-label">Preço do Quarto</label>
+            <input type="text" name="price" class="form-control" placeholder="Tipo do Quarto" value="{{ $rooms->price }}" readonly>
+        </div>
+        <div class="col mb-3">
             <label class="form-label">Tipo do Quarto</label>
             <input type="text" name="roomType" class="form-control" placeholder="Tipo do Quarto" value="{{ $rooms->roomType->name }}" readonly>
         </div>

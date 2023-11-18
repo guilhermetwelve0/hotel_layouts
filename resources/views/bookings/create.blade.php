@@ -8,30 +8,44 @@
     <form action="{{ route('bookings.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row mb-3">
-            <div class="col">
-                <input type="text" name="hotel_id" class="form-control" placeholder="Hotel">
-            </div>
-            <div class="col">
-                <input type="text" name="guests_id" class="form-control" placeholder="Nome do Hóspede">
+        <div class="col">
+                <select name="guests_id" class="form-control">
+                    <option value="">Selecionar Hóspede</option>
+                @foreach($guests as $rs)
+                    <option value="{{ $rs->id }}">{{ $rs->name }}</option>
+                @endforeach
+                </select>
             </div>
         </div>
         <div class="row mb-3">
-            <div class="col">
-                <input type="text" name="room_id" class="form-control" placeholder="Quarto da Reserva">
+        <div class="col">
+                <select name="room_id" class="form-control">
+                    <option value="">Selecionar Quarto</option>
+                @foreach($rooms as $rs)
+                    <option value="{{ $rs->id }}">{{ $rs->room_no }}</option>
+                @endforeach
+                </select>
             </div>
+            </div>
+            <div class="row mb-3">
             <div class="col">
                 <label class="form-label">Data do Check-in</label>
                 <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in">
-            </div>
+        </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                 <label class="form-label">Data do Check-out</label>
                 <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-out">
             </div>
+        </div>
+        <div class="row mb-3">
             <div class="col">
-                <input type="number" name="total" class="form-control" placeholder="Total da Reserva">
+            <div class="input-group">
+                <span class="input-group-text">R$</span>
+                <input type="number" name="total" class="form-control" id="total" placeholder="Total da Reserva" step="0.01">
             </div>
+        </div>
         </div>
         <div class="row mb-3">
     <div class="col">
@@ -45,10 +59,10 @@
             <option value="Cancelada">Cancelada</option>
         </select>
     </div>
-        </div>
+</div>
 
         <div class="row">
-            <div class="d-grid">
+            <div class="col d-flex justify-content-center">
                 <button type="submit" class="btn btn-dark">Enviar</button>
             </div>
         </div>

@@ -28,7 +28,7 @@
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->name }}</td>  
-                        <td class="align-middle">{{ $rs->price }}</td>  
+                        <td class="align-middle">R$ {{ number_format($rs->price, 2, ',', '.') }}</td>
                         <td class="align-middle">{{ $rs->icon }}</td>  
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">

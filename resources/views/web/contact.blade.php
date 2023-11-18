@@ -255,20 +255,29 @@ header ul li a:hover {
   <section class="home" id="home">
     <div class="head_container">
       <div class="box">
-        <div class="text">
-          <h1>Olá Sejam Bem Vindos</h1>
-          <h3>Bem-vindo ao nosso sistema de hotelaria! Sua estadia conosco será inesquecível.</h3>
-        </div>
+      <div class="text">
+      <h2 style="font-size: 2.5rem;" class="font-semibold mb-4 text-secondary">Informações de Contato</h2>
+      </br>
+          <div class="text-gray-200">
+              <div class="mb-5">
+                  <i class="fa fa-hotel"></i> Endereço: Rua Itajubá, 673 - Curitiba, Brasil
+              </div>
+              </div>
+  </br>
+              <div class="mb-5">
+                  <i class="fa fa-phone"></i> Telefone: (+00) 1234-5678
+              </div>
+              </br>
+              <div class="mb-5">
+                  <i class="fa fa-envelope"></i> Email: info@teste.com
+              </div>
+              </br>
+          </div>
+      </div>
+      <div>
       </div>
       <div class="image">
         <img src="{{asset('img/home1.jpg')}}" class="slide">
-      </div>
-      <div class="image_item">
-        <img src="{{asset('img/home1.jpg')}}" alt="" class="slide active" onclick="img('img/home1.jpg')">
-        <img src="{{asset('img/home2.jpg')}}" alt="" class="slide" onclick="img('img/home2.jpg')">
-        <img src="{{asset('img/home3.jpg')}}" alt="" class="slide" onclick="img('img/home3.jpg')">
-        <img src="{{asset('img/home4.jpg')}}" alt="" class="slide" onclick="img('img/home4.jpg')">
-      </div>
     </div>
   </section>
   <script>

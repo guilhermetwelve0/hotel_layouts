@@ -10,6 +10,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\RoomTypeController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HotelController;
+//use App\Http\Controllers\UserGuestController;
 
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
@@ -25,7 +26,17 @@ Route::controller(AuthController::class)->group(function () {
 
     Route::get('logout', 'logout')->middleware('auth')->name('logout');
 });
+/*
+Route::controller(UserGuestController::class)->group(function () {
+    Route::get('registerGuests', 'registerGuests')->name('register-guests');
+    Route::post('registerGuests', 'registerSaveGuests')->name('register.save');
 
+    Route::get('login', 'login')->name('login');
+    Route::post('login', 'loginAction')->name('login.action');
+
+    Route::get('logout', 'logout')->middleware('auth')->name('logout');
+});
+*/
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {
         return view('dashboard.dashboard');
