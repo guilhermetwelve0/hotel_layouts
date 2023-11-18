@@ -3,20 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\UserGuest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 
-class AuthController extends Controller
+class UserGuestController extends Controller
 {
-    public function register()
+    public function registerGuests()
     {
-        return view('auth/register');
+        return view('auth/register-guests');
     }
 
-    public function registerSave(Request $request)
+    public function registerSaveGuests(Request $request)
     {
         Validator::make($request->all(), [
             'name' => 'required',
@@ -24,8 +24,9 @@ class AuthController extends Controller
             'password' => 'required|confirmed'
         ])->validate();
 
-        User::create([
+        UserGuest::create([
             'name' => $request->name,
+            'cpf' => $request->cpf,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'level' => 'Admin'
@@ -74,29 +75,5 @@ class AuthController extends Controller
     public function settings()
     {
         return view('settings');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        $users = User::findOrFail($id);
-
-        $users->update($request->all());
-
-        return redirect()->route('profile')->with('success', 'Perfil atualizado com sucesso');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        $users = User::findOrFail($id);
-
-        $users->delete();
-
-        return redirect()->route('home')->with('success', 'Perfil deletado com sucesso');
     }
 }

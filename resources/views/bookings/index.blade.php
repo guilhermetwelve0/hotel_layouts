@@ -30,20 +30,24 @@
                 @foreach($bookings as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
-                        <td class="align-middle">{{ $rs->guests_id }}</td>
-                        <td class="align-middle">{{ $rs->room_id }}</td>
+                        <td class="align-middle">{{ $rs->guest->name }}</td>
+                        <td class="align-middle">{{ $rs->room->room_no }}</td>
                         <td class="align-middle">{{ $rs->check_in_date }}</td>  
                         <td class="align-middle">{{ $rs->check_out_date }}</td>  
-                        <td class="align-middle">{{ $rs->total }}</td>  
+                        <td class="align-middle">R$ {{ number_format($rs->total, 2, ',', '.') }}</td>
                         <td class="align-middle">{{ $rs->status }}</td>  
                         <td class="align-middle">
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a href="{{ route('bookings.show', $rs->id) }}" type="button" class="btn btn-secondary">Detalhes</a>
-                                <a href="{{ route('bookings.edit', $rs->id)}}" type="button" class="btn btn-warning">Editar</a>
-                                <form action="{{ route('bookings.destroy', $rs->id) }}" method="POST" type="button" class="btn btn-danger p-0" onsubmit="return confirm('Deletar?')">
-                                    @csrf
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a href="{{ route('bookings.show', $rs->id) }}" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i></a>
+                            <a href="{{ route('bookings.edit', $rs->id)}}" class="btn btn-warning">
+                            <i class="fas fa-edit"></i></a>
+                            <form action="{{ route('bookings.destroy', $rs->id) }}" method="POST" class="btn btn-danger p-0" onsubmit="return confirm('Deletar?')">
+                                @csrf
                                     @method('DELETE')
-                                    <button class="btn btn-danger m-0">Deletar</button>
+                                        <button type="submit" class="btn btn-danger">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
                                 </form>
                             </div>
                         </td>

@@ -19,6 +19,7 @@
                 <th>ID</th>
                 <th>Andar</th>
                 <th>Número do Quarto</th>
+                <th>Preço do Quarto</th>
                 <th>Tipo do Quarto</th>
                 <th>Descrição</th>
                 <th>Status da Reserva</th>
@@ -31,6 +32,7 @@
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->floor }}</td>
                         <td class="align-middle">{{ $rs->room_no }}</td>
+                        <td class="align-middle">R$ {{ number_format($rs->price, 2, ',', '.') }}</td>
                         <td class="align-middle">{{ $rs->roomType->name }}</td>
                         <td class="align-middle">{{ $rs->description }}</td>  
                         <td class="align-middle">{{ $rs->status }}</td>  

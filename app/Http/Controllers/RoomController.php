@@ -35,12 +35,23 @@ class RoomController extends Controller
         $request->validate([
             'floor' => 'required',
             'room_no' => 'required',
+            'price' => 'required',
             'room_type_id' => 'required',
             'description' => 'required',
             'status' => 'required',
         ]);
 
-        Room::create($request->all());
+        // Formatação do preço para reais (R$)
+        $formattedPrice = number_format($request->input('price'), 2, ',', '.');
+
+        Room::create([
+            'floor' => $request->input('floor'),
+            'room_no' => $request->input('room_no'),
+            'price' => $request->input('price'),            
+            'room_type_id' => $request->input('room_type_id'),
+            'description' => $request->input('description'),
+            'status' => $request->input('status'),
+        ]);
 
         return redirect()->route('rooms')->with('success', 'Quarto adicionando com sucesso');
     }

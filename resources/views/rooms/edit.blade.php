@@ -15,7 +15,11 @@
             </div>
             <div class="col mb-3">
                 <label class="form-label">Número do Quarto</label>
-                <input type="text" name="room_no" class="form-control" placeholder="Número do Quarto" value="{{ $rooms->room_no }}" >
+                <input type="number" name="room_no" class="form-control" placeholder="Número do Quarto" value="{{ $rooms->room_no }}" >
+            </div>
+            <div class="col mb-3">
+                <label class="form-label">Preço do Quarto</label>
+                <input type="number" name="price" class="form-control" placeholder="Preço do Quarto" value="{{ $rooms->price }}" >
             </div>
             <div class="col mb-3">
                 <label class="form-label">Tipo do Quarto</label>
@@ -27,13 +31,20 @@
                 <label class="form-label">Descrição do Quarto</label>
                 <input type="text" name="description" class="form-control" placeholder="Descrição do Quarto" value="{{ $rooms->description }}" >
             </div>
-            <div class="col mb-3">
-                <label class="form-label">Status da Reserva</label>
-                <input type="text" name="status" class="form-control" placeholder="Status da Reserva" value="{{ $rooms->status }}" >
             </div>
-        </div>
         <div class="row">
-            <div class="d-grid">
+            <div class="col mb-3">
+            <label class="form-label">Status do Quarto</label>
+            <select name="status" class="form-control">
+                <option value=" ">Status do Quarto</option>
+                <option value="Livre">Livre</option>
+                <option value="Ocupado">Ocupado</option>
+                <option value="Reservado">Reservado</option>
+            </select>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center">
                 <button class="btn btn-warning">Atualizar</button>
             </div>
         </div>

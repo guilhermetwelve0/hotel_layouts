@@ -31,14 +31,6 @@ class RoomTypeController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'floor' => 'required',
-            'room_no' => 'required',
-            'room_type_id' => 'required', // Certifique-se de incluir o tipo de quarto
-            'description' => 'required',
-            'status' => 'required',
-        ]);
-
         RoomType::create($request->all());
 
         return redirect()->route('room_types')->with('success', 'Tipo de quarto adicionando com sucesso');
