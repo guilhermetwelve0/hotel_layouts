@@ -70,4 +70,33 @@ class AuthController extends Controller
     {
         return view('profile');
     }
+
+    public function settings()
+    {
+        return view('settings');
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        $users = User::findOrFail($id);
+
+        $users->update($request->all());
+
+        return redirect()->route('profile')->with('success', 'Perfil atualizado com sucesso');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        $users = User::findOrFail($id);
+
+        $users->delete();
+
+        return redirect()->route('home')->with('success', 'Perfil deletado com sucesso');
+    }
 }
