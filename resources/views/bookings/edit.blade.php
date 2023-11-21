@@ -9,16 +9,32 @@
         @csrf
         @method('PUT')
         <div class="row">
-            <div class="col mb-3">
-                <label class="form-label">Hóspede</label>
-                <input type="text" name="guest" class="form-control" placeholder="Nome do Hóspede" value="{{ $bookings->guest->name }}" >
-            </div>
-        </div>
-        <div class="row">
-            <div class="col mb-3">
-                <label class="form-label">Quarto da Reserva</label>
-                <input type="text" name="room" class="form-control" placeholder="Quarto da Reserva" value="{{ $bookings->room->room_no }}" >
-            </div>
+        <div class="col mb-3">
+        <label class="form-label">Hóspede</label>
+        <select name="guest" class="form-control">
+            <option value="">Selecionar Hóspede</option>
+            @foreach($guests as $guest)
+                <option value="{{ $guest->id }}" {{ $bookings->guest->id == $guest->id ? 'selected' : '' }}>
+                    {{ $guest->name }}
+                </option>
+            @endforeach
+        </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col mb-3">
+        <label class="form-label">Quarto da Reserva</label>
+        <select name="room" class="form-control">
+            <option value="">Selecionar Quarto da Reserva</option>
+            @foreach($rooms as $room)
+                <option value="{{ $room->id }}" {{ $bookings->room->id == $room->id ? 'selected' : '' }}>
+                    {{ $room->room_no }}
+                </option>
+            @endforeach
+        </select>
+    </div>
+</div>
+<div class="row">
             <div class="col mb-3">
                 <label class="form-label">Data do Check-in</label>
                 <input type="date" name="check_in_date" class="form-control" placeholder="Data do Check-in" value="{{ $bookings->check_in_date }}" >
@@ -29,6 +45,8 @@
                 <label class="form-label">Data do Check-out</label>
                 <input type="date" name="check_out_date" class="form-control" placeholder="Data do Check-out" value="{{ $bookings->check_out_date }}" >
             </div>
+            </div>
+            <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Total da Reserva</label>
                 <input type="number" name="total" class="form-control" placeholder="Total da Reserva" value="{{ $bookings->total }}" >
@@ -36,6 +54,7 @@
         </div>
         <div class="row">
             <div class="col mb-3">
+            <label class="form-label">Status da Reserva</label>
         <select name="status" class="form-control">
             <option value=" ">Status da Reserva</option>
             <option value="Confirmada">Confirmada</option>

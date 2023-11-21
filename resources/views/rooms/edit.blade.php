@@ -8,7 +8,6 @@
     <form action="{{ route('rooms.update', $rooms->id) }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Andar do Quarto</label>
                 <input type="text" name="floor" class="form-control" placeholder="Andar do Quarto" value="{{ $rooms->floor }}" >
@@ -22,17 +21,20 @@
                 <input type="number" name="price" class="form-control" placeholder="Preço do Quarto" value="{{ $rooms->price }}" >
             </div>
             <div class="col mb-3">
-                <label class="form-label">Tipo do Quarto</label>
-                <input type="text" name="roomType" class="form-control" placeholder="Tipo do Quarto" value="{{ $rooms->roomType->name }}" >
-            </div>
+                <label class="form-label">Selecionar Tipo de Quarto</label>
+                <select name="room_type_id" class="form-control">
+                    <option value="">Selecionar Tipo de Quarto</option>
+                @foreach($room_types as $rs)
+                    <option value="{{ $rs->id }}" {{ $rooms->room_type_id == $rs->id ? 'selected' : '' }}>
+                    {{ $rs->name }}
+                    </option>
+                @endforeach
+            </select>
         </div>
-        <div class="row">
             <div class="col mb-3">
                 <label class="form-label">Descrição do Quarto</label>
                 <input type="text" name="description" class="form-control" placeholder="Descrição do Quarto" value="{{ $rooms->description }}" >
             </div>
-            </div>
-        <div class="row">
             <div class="col mb-3">
             <label class="form-label">Status do Quarto</label>
             <select name="status" class="form-control">
@@ -41,7 +43,6 @@
                 <option value="Ocupado">Ocupado</option>
                 <option value="Reservado">Reservado</option>
             </select>
-        </div>
     </div>
         <div class="row">
             <div class="col d-flex justify-content-center">

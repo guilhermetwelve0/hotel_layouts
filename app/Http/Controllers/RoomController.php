@@ -72,8 +72,9 @@ class RoomController extends Controller
     public function edit(string $id)
     {
         $rooms = Room::findOrFail($id);
-
-        return view('rooms.edit', compact('rooms'));
+        $room_types = RoomType::all();
+    
+        return view('rooms.edit', compact('rooms', 'room_types'));
     }
 
     /**

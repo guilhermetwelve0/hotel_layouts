@@ -32,8 +32,8 @@
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->guest->name }}</td>
                         <td class="align-middle">{{ $rs->room->room_no }}</td>
-                        <td class="align-middle">{{ $rs->check_in_date }}</td>  
-                        <td class="align-middle">{{ $rs->check_out_date }}</td>  
+                        <td class="align-middle">{{ $rs->check_in_date }}</td>
+                        <td class="align-middle">{{ $rs->check_out_date }}</td>
                         <td class="align-middle">R$ {{ number_format($rs->total, 2, ',', '.') }}</td>
                         <td class="align-middle">{{ $rs->status }}</td>  
                         <td class="align-middle">

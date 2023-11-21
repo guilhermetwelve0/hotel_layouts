@@ -268,7 +268,7 @@ header ul li a:hover {
         </div>
         </div>
         <div class="image">
-            <img src="{{asset('img/home1.jpg')}}" class="slide">
+        <img src="{{asset('img/home2.jpg')}}" class="slide">
         </div>
 </section>
 

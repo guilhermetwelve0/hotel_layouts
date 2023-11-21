@@ -24,6 +24,7 @@
                         <input type="text" name="email" disabled class="form-control" value="{{ auth()->user()->email }}" placeholder="Email">
                     </div>
                 </div>
+                <!--
                 <div class="row mt-2">
                     <div class="col-md-6">
                         <label class="labels">Telefone</label>
@@ -34,7 +35,7 @@
                         <input type="text" name="address" class="form-control" value="{{ auth()->user()->address }}" placeholder="Endereço">
                     </div>
                 </div>
-                 
+                -->
                 <div class="mt-5 text-center"><button id="btn" class="btn btn-dark profile-button" type="submit">Salvar Perfil</button></div>
             </div>
         </div>
