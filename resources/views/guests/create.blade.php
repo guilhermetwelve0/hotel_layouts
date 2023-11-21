@@ -5,6 +5,20 @@
 @section('contents')
     <h1 class="mb-0">Dados do Hóspede</h1>
     <hr />
+
+    @if ($errors->has('cpf'))
+    <div id="error-message" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Erro:</strong> {{ $errors->first('cpf') }}
+    </div>
+    <script>
+        // Certifique-se de que o Bootstrap JS está incluído para que o botão de fechar funcione
+        var alert = new bootstrap.Alert(document.getElementById('error-message'));
+        setTimeout(function() {
+            alert.close();
+        }, 5000);
+    </script>
+    @endif
+
     <form action="{{ route('guests.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row mb-3">
