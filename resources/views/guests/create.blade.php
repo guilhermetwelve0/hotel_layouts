@@ -5,6 +5,20 @@
 @section('contents')
     <h1 class="mb-0">Dados do Hóspede</h1>
     <hr />
+
+    @if ($errors->has('cpf'))
+    <div id="error-message" class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Erro:</strong> {{ $errors->first('cpf') }}
+    </div>
+    <script>
+        // Certifique-se de que o Bootstrap JS está incluído para que o botão de fechar funcione
+        var alert = new bootstrap.Alert(document.getElementById('error-message'));
+        setTimeout(function() {
+            alert.close();
+        }, 5000);
+    </script>
+    @endif
+
     <form action="{{ route('guests.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="row mb-3">
@@ -33,22 +47,22 @@
         </select>
     </div>
     <div class="col">
-        <input type="text" name="cep" class="form-control" placeholder="CEP">
-    </div>
-</div>
-<div class="row mb-3">
-    <div class="col">
-        <input type="text" name="street" class="form-control" placeholder="Endereço">
-    </div>
-</div>
-<div class="row mb-3">
-    <div class="col">
-        <input type="text" name="city" class="form-control" placeholder="Cidade">
-    </div>
+                <input type="text" name="cep" class="form-control" placeholder="CEP" id="cep">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" name="street" class="form-control" placeholder="Endereço" id="street">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" name="city" class="form-control" placeholder="Cidade" id="city">
+            </div>
     </div>    
 <div class="row mb-3">
     <div class="col">
-        <select name="state" class="form-control">
+        <select name="state" class="form-control" id="state">
             <option value=" ">Estado</option>
             <option value="AC">AC</option>
             <option value="AL">AL</option>
@@ -97,4 +111,32 @@
             </div>
         </div>
     </form>
+    
+        <!-- Script JavaScript para preencher automaticamente os campos do endereço -->
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#cep').on('input', function() {
+                var cep = $(this).val().replace(/[^0-9]/, '');
+
+                if (cep.length === 8) {
+                    $.getJSON(`https://viacep.com.br/ws/${cep}/json/`, function(data) {
+                        if (!data.erro) {
+                            // Preencha os campos de endereço automaticamente
+                            console.log(data); // Verifique os dados no console para diagnóstico
+                            $('#street').val(data.logradouro);
+                            $('#city').val(data.localidade);
+                            $('#state').val(data.uf);
+                        } else {
+                            console.log('Erro ao obter dados do CEP.');
+                        }
+                    });
+                }
+            });
+        });
+
+        setTimeout(function() {
+            $('#error-message').alert('close');
+        }, 5000);
+    </script>
 @endsection

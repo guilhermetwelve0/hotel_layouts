@@ -73,8 +73,10 @@ class BookingController extends Controller
     public function edit(string $id)
     {
         $bookings = Reserva::findOrFail($id);
-
-        return view('bookings.edit', compact('bookings'));
+        $guests = Guest::all();
+        $rooms = Room::all();
+    
+        return view('bookings.edit', compact('bookings', 'guests', 'rooms'));
     }
 
     /**

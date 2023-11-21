@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Guest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class GuestController extends Controller
 {
@@ -30,9 +31,21 @@ class GuestController extends Controller
      */
     public function store(Request $request)
     {
+        // Valide o campo cpf usando a regra cpf personalizada
+        $validator = Validator::make($request->all(), [
+            'cpf' => ['required', 'string', 'cpf'],
+        ], [
+            'cpf.cpf' => 'O CPF informado não é válido.',
+        ]);
+
+        // Se a validação falhar, retorne para a página anterior com os erros
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
         Guest::create($request->all());
 
-        return redirect()->route('guests')->with('success', 'Hóspede adicionando com sucesso');
+        return redirect()->route('guests')->with('success', 'Hóspede adicionado com sucesso');
     }
 
     /**
